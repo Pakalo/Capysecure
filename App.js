@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {StyleSheet, Text, Image, Pressable} from 'react-native';
+import {View} from "react-native-web";
+import Navbar from './components/Navbar'
+import Devices from "./components/Devices";
+import Cameras from "./components/Cameras"
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <View style={styles.body}>
+        <Navbar/>
+        <Devices/>
+      </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  body:{
+    backgroundColor : '#080521',
+    height : '100%',
+    padding : 20,
   },
 });
