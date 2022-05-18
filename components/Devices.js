@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, Image, Pressable} from 'react-native';
-import {Picker, ScrollView, View} from "react-native-web";
+import {Dimensions, Picker, ScrollView, View} from "react-native-web";
 
 
 export default class Devices extends React.Component{
@@ -57,18 +57,19 @@ const styles = StyleSheet.create({
         marginTop : 15,
     },
     scroll_view : {
-        height : 700,
-        width : 450,
+        maxHeight : "95%",
+        width : '100%',
     },
     main : {
-        marginBottom : 100,
+        marginTop : 50,
+        maxHeight: "90%"
     },
     card : {
         marginTop : 35,
         backgroundColor : '#282454',
         padding: 20,
-        width : 400,
-        height : 160,
+        width : 407,
+        height : 150,
         borderRadius : 40,
     },
     text : {

@@ -1,24 +1,32 @@
-import React from 'react';
-import {StyleSheet, Text, Image, Pressable} from 'react-native';
-import {View} from "react-native-web";
+import {StyleSheet} from 'react-native';
+import {Dimensions, View} from "react-native-web";
 import Navbar from './components/Navbar'
 import Devices from "./components/Devices";
-import Cameras from "./components/Cameras"
+import Active from "./components/Active"
 
 
 export default function App() {
   return (
       <View style={styles.body}>
-        <Navbar/>
-        <Devices/>
+          <Navbar style={styles.navbar}/>
+          <View style={styles.page}>
+              <Devices/>
+              <Active/>
+          </View>
       </View>
   );
 }
 
 const styles = StyleSheet.create({
-  body:{
-    backgroundColor : '#080521',
-    height : '100%',
-    padding : 20,
-  },
+    body:{
+        minWidth : '100%',
+        minHeight : "100%",
+        backgroundColor : '#080521',
+        padding : 20,
+    },
+    page : {
+        flex : "auto",
+        flexDirection : "row",
+
+    },
 });
